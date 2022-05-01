@@ -87,7 +87,6 @@ namespace op
             if(!poseKeypoints.empty()) return poseKeypoints;
             else return Array<float>(1,-1000);
         }
-}
 
         /**
          * People ID
