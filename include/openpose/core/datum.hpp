@@ -83,10 +83,7 @@ namespace op
          * Size: #people x #body parts (e.g., 18 for COCO or 15 for MPI) x 3 ((x,y) coordinates + score)
          */
         Array<float> poseKeypoints;
-        Array<float> getPoseKeypoints(){
-            if(!poseKeypoints.empty()) return poseKeypoints;
-            else return Array<float>(1,-1000);
-        }
+        Array<float> getPoseKeypoints();
 
         /**
          * People ID
@@ -96,6 +93,7 @@ namespace op
          * Size: #people
          */
         Array<long long> poseIds;
+        Array<float> getPoseIds();
 
         /**
          * Body pose global confidence/score for each person in the image.
@@ -106,6 +104,7 @@ namespace op
          * Size: #people
          */
         Array<float> poseScores;
+        Array<float> getPoseScores();
 
         /**
          * Body pose heatmaps (body parts, background and/or PAFs) for the whole image.
@@ -120,6 +119,7 @@ namespace op
          * Size: #heatmaps x output_net_height x output_net_width
          */
         Array<float> poseHeatMaps;
+        Array<float> getPoseHeatMaps();
 
         /**
          * Body pose candidates for the whole image.
@@ -145,6 +145,7 @@ namespace op
          * Size: #people x #face parts (70) x 3 ((x,y) coordinates + score)
          */
         Array<float> faceKeypoints;
+        Array<float> getFaceKeypoints();
 
         /**
          * Face pose heatmaps (face parts and/or background) for the whole image.
@@ -152,6 +153,7 @@ namespace op
          * Size: #people x #face parts (70) x output_net_height x output_net_width
          */
         Array<float> faceHeatMaps;
+        Array<float> getFaceHeatMaps();
 
         /**
          * Hand detection locations (x,y,width,height) for each person in the image.
@@ -181,6 +183,7 @@ namespace op
          * Size: #people x #body parts (e.g., 18 for COCO or 15 for MPI) x 4 ((x,y,z) coordinates + score)
          */
         Array<float> poseKeypoints3D;
+        Array<float> getPoseKeypoints3D();
 
         /**
          * Face keypoints (x,y,z,score) locations for each person in the image.
@@ -188,6 +191,7 @@ namespace op
          * Size: #people x #face parts (70) x 4 ((x,y,z) coordinates + score)
          */
         Array<float> faceKeypoints3D;
+        Array<float> getFaceKeypoints3D();
 
         /**
          * Hand keypoints (x,y,z,score) locations for each person in the image.
