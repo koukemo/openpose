@@ -293,7 +293,8 @@ namespace op
     }
 
     Array<float> Datum::getPoseKeypoints(){
-        if(!poseKeypoints.empty()) return poseKeypoints;
+        if(!poseKeypoints.empty()){
+            return poseKeypoints;
         }
         else {
             return Array<float>(1, -1);
